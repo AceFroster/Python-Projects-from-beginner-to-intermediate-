@@ -23,35 +23,41 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.")
 
-direction = input("You're at a crossroad. Where would you like to go? \n Left or Right \n")
+direction = input("You're at a crossroad. Where would you like to go? \n Left or Right \n").lower()
 
-if direction == "Left":
+if direction == "left":
     print("\nYou have come to a lake and you can see an island in the middle of the lake")
     print("Would you like to swim? Or Would you like to wait for a boat")
-    lake_place = input("Type swim to 'Swim' or type 'Wait' to wait for a boat: ")
-    if lake_place == "Wait":
+    lake_place = input("Type swim to 'Swim' or type 'Wait' to wait for a boat: ").lower()
+    if lake_place == "wait":
         print("\nThe Boat has Arrived!")
         print("Going to the island")
         print("You have arrived on the island but now you see three doors.")
         print("Door Blue, Yellow and Red. Which would you like to pick? \n")
         door = input("Type 'Red' to choose the red door \n"
                      "Type 'Blue' to choose the blue door \n"
-                     "Type 'Yellow' to choose the yellow door: ")
-        if door == "Blue":
+                     "Type 'Yellow' to choose the yellow door: ").lower()
+        if door == "blue":
             print("You got eaten by the beast behind the Blue door")
             print("Game Over")
-        elif door == "Red":
+        elif door == "red":
             print("Behind the red door were flames, you were burned alive")
             print("Game Over")
-        elif door == "Yellow":
+        elif door == "yellow":
             print("\nCongratulations!!")
             print("You found the treasure!")
         else:
             print("\nYou did not pick any door")
-            print("You've lost")
-    else:
+            print("Game Over")
+    elif lake_place == "swim":
         print("You were attacked by trout")
         print("Game Over")
-else:
+    else:
+        print("You chose not to do anything")
+        print("Game Over")
+elif direction == "right":
     print("Fell into a hole.")
+    print("Game Over")
+else:
+    print("Invalid Direction.")
     print("Game Over")
