@@ -36,32 +36,34 @@ user_choice = int(input("Enter your choice: "))
 
 ai_choice = random.randint(0, 2)
 
-print(choice_game[user_choice])
+if user_choice >= 3 or user_choice < 0:
+    print("Invalid Number. You lose!")
+else:
+    print(choice_game[user_choice])
 
-print("Computer picked")
+    print("Computer picked")
 
-if ai_choice == 0:
-    print(choice_game[ai_choice])
-    if user_choice == 1:
-        print("You win!")
-    elif user_choice == 2:
-        print("You lose!")
-    else:
-        print("It's a draw!")
-elif ai_choice == 1:
-    print(choice_game[ai_choice])
-    if user_choice == 0:
-        print("You lose!")
-    elif user_choice == 2:
-        print("You win!")
-    else:
-        print("It's a draw!")
-elif ai_choice == 2:
-    print(choice_game[ai_choice])
-    if user_choice == 0:
-        print("You win!")
-    elif user_choice == 1:
-        print("You lose!")
-    else:
-        print("It's a draw!")
-
+    if ai_choice == 0:
+        print(choice_game[ai_choice])
+        if user_choice == 1:
+            print("You win!")
+        elif user_choice == 2:
+            print("You lose!")
+        else:
+            print("It's a draw!")
+    elif ai_choice == 1:
+        print(choice_game[ai_choice])
+        if user_choice == 0:
+            print("You lose!")
+        elif user_choice == 2:
+            print("You win!")
+        else:
+            print("It's a draw!")
+    elif ai_choice == 2:
+        print(choice_game[ai_choice])
+        if user_choice == 0:
+            print("You win!")
+        elif user_choice == 1:
+            print("You lose!")
+        else:
+            print("It's a draw!")
