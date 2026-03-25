@@ -54,7 +54,7 @@ calculate_love_score("rutu", "lomo")
 Output:
 
 ```id="j1k2l3"
-32
+43
 ```
 
 ---
